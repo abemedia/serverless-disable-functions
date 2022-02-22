@@ -10,7 +10,7 @@
     "@commitlint/cli": "^9.1.1",
     "@commitlint/config-conventional": "^9.1.1",
     "eslint": "^8.9.0",
-    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-prettier": "^8.4.0",
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
