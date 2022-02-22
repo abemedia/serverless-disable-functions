@@ -1,8 +1,17 @@
 'use strict';
 
-
 const providers = [
-  'aws', 'azure', 'aliyun', 'cloudflare', 'fn', 'google', 'knative', 'kubeless', 'openwhisk', 'spotinst', 'tencent'
+  'aws',
+  'azure',
+  'aliyun',
+  'cloudflare',
+  'fn',
+  'google',
+  'knative',
+  'kubeless',
+  'openwhisk',
+  'spotinst',
+  'tencent',
 ];
 
 class ServerlessDisableFunctionPlugin {
@@ -10,8 +19,7 @@ class ServerlessDisableFunctionPlugin {
     this.serverless = serverless;
 
     // Add a validation for each of the standard providers
-    providers.forEach(provider => {
-
+    providers.forEach((provider) => {
       serverless.configSchemaHandler.defineFunctionProperties(provider, {
         properties: {
           enabled: { type: 'boolean' },
@@ -21,7 +29,7 @@ class ServerlessDisableFunctionPlugin {
     this.hooks = { 'before:package:initialize': this.run.bind(this) };
   }
 
-  run () {
+  run() {
     Object.entries(this.serverless.service.functions).forEach(([key, func]) => {
       if (func.enabled !== undefined && !func.enabled) {
         this.serverless.cli.log('Disabling function: ' + key);
