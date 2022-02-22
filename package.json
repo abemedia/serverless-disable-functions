@@ -1,6 +1,6 @@
 {
   "name": "serverless-disable-functions",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A simple serverless plugin to disable functions.",
   "scripts": {
     "prepare": "husky install",
