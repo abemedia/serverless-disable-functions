@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "description": "A simple serverless plugin to disable functions.",
   "scripts": {
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix"
+    "lint": "eslint src"
   },
   "main": "src/index.js",
   "devDependencies": {
