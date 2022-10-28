@@ -24,18 +24,28 @@ plugins:
 ## Usage
 
 Add the parameter `enabled: false` to a function to disable it.
-This allows you to enable/disable functions by stage like so:
+Add the parameter `disabled: true` to an event to disable it.
+This allows you to enable/disable functions/events by stage like so:
 
 ```yaml
 service: hello-service
 provider: aws
 custom:
+  hello_event_disabled:
+    dev: true
+    qa: true
+    prod: false
   hello_enabled:
     dev: true
+    qa: false
     prod: false
 
 functions:
   hello:
     handler: handler.hello
     enabled: ${self:custom.hello_enabled.${opt:stage}}
+    events:
+      - sns:
+        displayName: test event
+        disabled: ${self:custom.hello_event_disabled.${opt:stage}}
 ```
