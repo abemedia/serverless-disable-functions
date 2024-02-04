@@ -18,8 +18,8 @@
     "prettier": "^3.0.0"
   },
   "lint-staged": {
-    "**/*.{ts,js}": "eslint --fix",
-    "**/*.{md,json,yml}": "prettier --write"
+    "*": "prettier --ignore-unknown --cache --write",
+    "*.{ts,js}": "eslint --fix"
   },
   "repository": {
     "type": "git",
