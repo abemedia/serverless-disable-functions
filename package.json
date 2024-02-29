@@ -8,7 +8,7 @@
   },
   "main": "src/index.js",
   "devDependencies": {
-    "@commitlint/cli": "^18.2.0",
+    "@commitlint/cli": "^19.0.3",
     "@commitlint/config-conventional": "^18.1.0",
     "eslint": "^8.46.0",
     "eslint-config-prettier": "^9.0.0",
