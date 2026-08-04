@@ -1,0 +1,8 @@
+{
+  "name": "osls-v4",
+  "private": true,
+  "devDependencies": {
+    "osls": "4",
+    "serverless-disable-functions": "file:../.."
+  }
+}

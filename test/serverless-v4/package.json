@@ -1,0 +1,8 @@
+{
+  "name": "serverless-v4",
+  "private": true,
+  "devDependencies": {
+    "serverless": "4",
+    "serverless-disable-functions": "file:../.."
+  }
+}

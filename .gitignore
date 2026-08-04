@@ -15,3 +15,10 @@ node_modules/
 
 # Serverless directories
 .serverless/
+
+# Test framework workspaces
+test/*/package-lock.json
+test/*/.fixture-*
+
+# Local environment
+.env
