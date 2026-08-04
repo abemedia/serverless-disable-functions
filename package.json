@@ -3,27 +3,18 @@
   "version": "1.0.0",
   "description": "A simple serverless plugin to disable functions.",
   "scripts": {
-    "prepare": "husky install",
-    "lint": "eslint src"
+    "prepare": "husky",
+    "lint": "biome check ."
   },
   "main": "src/index.js",
+  "type": "commonjs",
   "devDependencies": {
-    "@commitlint/cli": "^20.0.0",
-    "@commitlint/config-conventional": "^20.0.0",
-    "eslint": "^8.46.0",
-    "eslint-config-prettier": "^10.0.1",
-    "eslint-plugin-prettier": "^5.0.0",
-    "husky": "^9.0.10",
-    "lint-staged": "^16.0.0",
-    "prettier": "^3.0.0"
-  },
-  "lint-staged": {
-    "*": "prettier --ignore-unknown --cache --write",
-    "*.{ts,js}": "eslint --fix"
+    "@biomejs/biome": "^2.5.7",
+    "husky": "^9.1.7"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abeMedia/serverless-disable-functions.git"
+    "url": "git+https://github.com/abemedia/serverless-disable-functions.git"
   },
   "keywords": [
     "serverless"
@@ -31,7 +22,7 @@
   "author": "Adam Bouqdib <adam@abemedia.co.uk>",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/abeMedia/serverless-disable-functions/issues"
+    "url": "https://github.com/abemedia/serverless-disable-functions/issues"
   },
-  "homepage": "https://github.com/abeMedia/serverless-disable-functions#readme"
+  "homepage": "https://github.com/abemedia/serverless-disable-functions#readme"
 }
