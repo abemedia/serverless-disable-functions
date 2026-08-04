@@ -4,10 +4,14 @@
   "description": "A simple serverless plugin to disable functions.",
   "scripts": {
     "prepare": "husky",
-    "lint": "biome check ."
+    "lint": "biome check .",
+    "test": "node --env-file-if-exists=.env --test test/*.test.js"
   },
   "main": "src/index.js",
   "type": "commonjs",
+  "files": [
+    "src"
+  ],
   "devDependencies": {
     "@biomejs/biome": "^2.5.7",
     "husky": "^9.1.7"

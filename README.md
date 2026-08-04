@@ -39,3 +39,8 @@ functions:
     handler: handler.hello
     enabled: ${self:custom.hello_enabled.${opt:stage}}
 ```
+
+## Compatibility
+
+Works with every version of the Serverless Framework from v1.12 up to and including v4,
+as well as [osls](https://github.com/oss-serverless/osls).

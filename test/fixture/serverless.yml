@@ -1,0 +1,29 @@
+service: fixture
+configValidationMode: error
+
+provider:
+  name: aws
+  # An explicit bucket stops v4 resolving deployment state from AWS during `package`.
+  deploymentBucket:
+    name: fake-test-bucket
+
+custom:
+  stageToggledEnabled:
+    dev: true
+    prod: false
+
+plugins:
+  - serverless-disable-functions
+
+functions:
+  alwaysOn:
+    handler: handler.hello
+  explicitlyEnabled:
+    handler: handler.hello
+    enabled: true
+  disabled:
+    handler: handler.hello
+    enabled: false
+  stageToggled:
+    handler: handler.hello
+    enabled: ${self:custom.stageToggledEnabled.${opt:stage}}
