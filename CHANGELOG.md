@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/abemedia/serverless-disable-functions/compare/v1.0.0...v1.0.1) (2026-08-05)
+
+
+### Bug Fixes
+
+* support all serverless framework versions ([#459](https://github.com/abemedia/serverless-disable-functions/issues/459)) ([155735a](https://github.com/abemedia/serverless-disable-functions/commit/155735acb16cbe590137b9cbec51ce0a3d0d8132))
+
 ## 1.0.0 (2022-02-22)
 
 
