@@ -6,7 +6,7 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!.github/.release-please-manifest.json"]
+    "includes": ["**", "!.github/.release-please-manifest.json", "!CHANGELOG.md"]
   },
   "formatter": {
     "indentStyle": "space",
@@ -16,6 +16,11 @@
     "formatter": {
       "quoteStyle": "single",
       "trailingCommas": "es5"
+    }
+  },
+  "yaml": {
+    "formatter": {
+      "quoteStyle": "single"
     }
   },
   "overrides": [
