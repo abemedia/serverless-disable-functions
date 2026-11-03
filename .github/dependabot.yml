@@ -4,10 +4,21 @@ updates:
     directory: /
     schedule:
       interval: monthly
+    versioning-strategy: increase
     open-pull-requests-limit: 10
+    groups:
+      dev-dependencies:
+        dependency-type: development
+        update-types:
+          - minor
+          - patch
 
   - package-ecosystem: github-actions
     directory: /
     schedule:
       interval: monthly
     open-pull-requests-limit: 10
+    groups:
+      actions:
+        patterns:
+          - '*'
